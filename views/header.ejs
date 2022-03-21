@@ -1,0 +1,18 @@
+<header>
+    <div class="container">
+        <div class="header-left"><a href="/"><i class="fas fa-globe"></i>Works</a></div>
+        <a href="#" class="menu-icon"><i class="fas fa-align-justify"></i></a>
+        <div class="header-right">
+            <ul>
+                <% if(locals.isLoggedIn){ %>
+                    <li><a href="/login">ログイン</a></li>
+                    <li><a href="logout">ログアウト</a></li>
+                <% }else{ %>
+                    <li><a href="/login">ログイン</a></li>
+                    <li><a href="/account">新規登録</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="username">ようこそ、<%= locals.username %>さん</div>
+    </div>
+</header>

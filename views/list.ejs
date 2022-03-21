@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English</title>
+    <link rel="stylesheet" href="/css/e_css/style.css">
+    <link rel="stylesheet" href="/css/e_css/responsive.css">
+    <script src="https://kit.fontawesome.com/75eed8fdb7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left"><a href="#"><i class="fab fa-buromobelexperte"></i>English</a></div>
+            <a href="#" class="menu-icon"><i class="fas fa-align-justify"></i></a>
+            <div class="header-right">
+                <ul>
+                    <li><a href="/e_sentence">sentence</a></li>
+                    <li><a href="/e_answer">answer</a></li>
+                </ul>
+            </div>
+            <div class="username">ようこそ、<%= locals.username %>さん</div>
+        </div>
+    </header>
+    <main>
+        <div class="words">
+        <div class="container">
+            <h3 class="words-title"><i class="fas fa-angle-double-right"></i>English list...</h3>
+            <div class="words-contents">
+                <% words.forEach((word)=>{ %>
+                <div class="word-item">
+                    <p class="text-content"><%= word.id %>. <a href="#"><%= word.word %></a></p>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+        <div class="footer-left"><a href="#"><i class="fab fa-buromobelexperte"></i>English</a></div>
+        <a href="#" class="menu-icon"><i class="fas fa-align-justify"></i></a>
+        <div class="footer-right">
+            <ul>
+                <li><a href="/">works</a></li>
+                <li><a href="/e_sentence">sentence</a></li>
+                <li><a href="/e_answer">answer</a></li>
+            </ul>
+        </div>
+    </div>
+    </footer>
+    
+</body>
+</html>

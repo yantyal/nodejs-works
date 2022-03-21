@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Avenir Next";
+  }
+li{
+    list-style: none;
+}
+a{
+    color:#fff;
+    text-decoration:dotted;
+}
+i{
+    margin-right:5px;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin:0 auto;
+}
+header{
+    height:65px;
+    width: 100%;
+    background-color:rgba(34, 49, 52, 0.9);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.header-left{
+    font-size: 30px;
+    margin:10px 0 0 20px;
+    float:left;
+}
+.username{
+    color:#7b777c;
+    font-size: 18px;
+    margin:20px 10px 0 0;
+    float: right;
+}
+.header-right{
+    float:right;
+    margin-right: 20px;
+}
+.header-right li{
+    padding:20px 20px;
+    transition: all 0.5s;
+    float:left;
+}
+.header-right li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.menu-icon{
+    color: white;
+    float: right;
+    font-size: 30px;
+    margin:10px 20px 0 0;
+    display:none;
+}
+
+.works{
+    padding: 50px;
+    padding-top: 120px;
+    width: 100%;
+    background-color:#f7f7f7;
+}
+.works-title{
+    border-bottom: 2px solid #dee7ec;
+    font-size:28px;
+    padding-bottom:15px;
+    margin-bottom:50px;
+}
+.works-items{
+    text-align: center;
+    width:100%;
+}
+.works-item{
+    width: 25%;
+    float:left;
+}
+.works-name{
+    font-size:24px;
+    margin-top:20px;
+}
+.works h3{
+    font-weight: normal;
+}
+.text-content{
+    width:80%;
+    display:inline-block;
+    margin:10px 0 20px 0;
+    font-size:12px;
+    color:#b3aeb5;
+}
+.text-content a{
+    color: #7b777c;
+}
+.clear{
+    clear:left;
+}
+
+.contact-form{
+    padding: 50px;
+}
+.contact-form h3{
+    font-weight: normal;
+}
+.form{
+    text-align: center;
+}
+form p{
+    color:#7b777c;
+}
+input, textarea{
+    width:400px;
+    margin-top:10px;
+    margin-bottom:30px;
+    padding:20px;
+    font-size:18px;
+    border:1px solid #dee7ec;
+}
+.contact-submit{
+    border: none;
+    background-color:#5dca88;
+    color:white;
+    box-shadow: 0 7px #1a7940;
+}
+.contact-submit:active{
+    box-shadow:none;
+    position:relative;
+    top:7px;
+}
+
+.account-form{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.account-form h3{
+    font-weight: normal;
+}
+.account-errors{
+    text-align: center;
+    width:400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.account-errors ul{
+    text-align: left;
+}
+.account-errors li{
+    list-style: inside;
+    color: #bb4147;
+}
+.account-submit{
+    border: none;
+    background-color:#645dca;
+    color:white;
+    box-shadow: 0 7px #2a247a;
+}
+.account-submit:active{
+    box-shadow:none;
+    position:relative;
+    top:7px;
+}
+
+footer{
+    height:100px;
+    background-color:rgba(34, 49, 52, 0.9);
+    color:#fff
+}
+.footer-left{
+    float:left;
+    font-size:36px;
+    margin: 10px 0 0 20px;
+}
+.footer-right{
+    float:right;
+    margin-right: 20px;
+}
+.footer-right li{
+    padding:20px;
+    float: left;
+}

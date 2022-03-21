@@ -1,0 +1,22 @@
+@media(max-width:1000px){
+    .works-item{
+        width: 50%;
+    }
+}
+@media(max-width:670px){
+    .works-item{
+        width: 100%;
+    }
+    .header-right{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    input, textarea, .account-errors{
+        width: 100%;
+    }
+    .footer-right{
+        display: none;
+    }
+}

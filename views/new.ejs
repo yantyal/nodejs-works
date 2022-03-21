@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works</title>
+    <link rel="stylesheet" href="/css/b_css/book.css" />
+    <link rel="stylesheet" href="/css/b_css/responsive.css" />
+    <script
+      src="https://kit.fontawesome.com/75eed8fdb7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/search.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <a href="/book"><i class="fas fa-book"></i>Book</a>
+        </div>
+        <a href="#" class="menu-icon"><i class="fas fa-align-justify"></i></a>
+        <div class="header-right">
+          <ul>
+            <% if(locals.isLoggedIn){ %>
+            <li><a href="/login">ログイン</a></li>
+            <li><a href="logout">ログアウト</a></li>
+            <% }else{ %>
+            <li><a href="/login">ログイン</a></li>
+            <li><a href="/account">新規登録</a></li>
+            <% } %>
+          </ul>
+        </div>
+        <div class="username">ようこそ、<%= locals.username %>さん</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="books">
+        <div class="container">
+          <div class="books-wrapper">
+            <h3 class="books-title">
+              <i class="fas fa-angle-double-right"></i>register book...
+            </h3>
+            <div class="search-radio">
+              <input
+                id="search-radio-button"
+                type="radio"
+                name="search-radio"
+                value="ISBN"
+                checked
+                onclick="checkRadio()"
+              />ISBN
+              <input
+                type="radio"
+                name="search-radio"
+                value="TITLE"
+                onclick="checkRadio()"
+              />TITLE
+            </div>
+            <form class="search" id="search1">
+              <input
+                class="search-word"
+                type="text"
+                id="isbn"
+                placeholder="Insert ISBN"
+              />
+              <input
+                class="search-button"
+                type="button"
+                value="検索"
+                onclick="clickBtn()"
+              />
+            </form>
+            <form class="search" id="search2">
+              <input
+                class="search-word"
+                type="text"
+                name="isbn2"
+                id="isbn2"
+                placeholder="Insert TITLE"
+              />
+              <input
+                class="search-button"
+                type="button"
+                value="検索"
+                onclick="clickBtn2()"
+              />
+            </form>
+          </div>
+          <div class="books-contents">
+            <div class="register-wrapper" id="register-wrapper1">
+              <form action="/new" method="post">
+                <img id="image" src="" />
+                <div class="register-author">
+                  著者<span class="space"></span>：<input
+                    id="author"
+                    type="text"
+                    name="author"
+                  />
+                </div>
+                <div class="register-title">
+                  タイトル：<input id="title" type="text" name="title" />
+                </div>
+                <input id="smallImg" type="hidden" name="smallImg" />
+                <input id="largeImg" type="hidden" name="largeImg" />
+                <input class="register-button" type="submit" value="登録" />
+              </form>
+            </div>
+            <div id="register-wrapper2"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+          <a href="/book"><i class="fas fa-book"></i>Book</a>
+        </div>
+        <a href="#" class="menu-icon"><i class="fas fa-align-justify"></i></a>
+        <div class="footer-right">
+          <ul>
+            <li><a href="/">works</a></li>
+            <li><a href="/e_sentence">English</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

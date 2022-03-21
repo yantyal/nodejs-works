@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="/css/works.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <script src="https://kit.fontawesome.com/75eed8fdb7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('header'); %>
+
+    <main>
+        <div class="works">
+            <div class="container">
+                <h3 class="works-title"><i class="fas fa-angle-double-right"></i>my works...</h3>
+                <div class="works-items">
+                <div class="works-item">
+                    <a href="/e_sentence"><img src="/images/works_image_01.png"></a>
+                    <p class="works-name">English</p>
+                    <p class="text-content">Webページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。ソースコードは、<a href="#">こちら</a>。</p>
+                </div>
+                <div class="works-item">
+                    <a href="/book"><img src="/images/works_image_01.png"></a>
+                    <p class="works-name">Book</p>
+                    <p class="text-content">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。ソースコードは、<a href="#">こちら</a>。</p>
+                </div>
+                <div class="works-item">
+                    <a href="#"><img src="/images/works_image_01.png"></a>
+                    <p class="works-name">webサイト</p>
+                    <p class="text-content">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。ソースコードは、<a href="#">こちら</a>。</p>
+                </div>
+                <div class="works-item">
+                    <a href="#"><img src="/images/works_image_01.png"></a>
+                    <p class="works-name">webサイト</p>
+                    <p class="text-content">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。ソースコードは、<a href="#">こちら</a>。</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <div class="container">
+            <h3 class="works-title"><i class="far fa-envelope"></i>お問い合わせ</h3>
+            <form class="form" action="/" method="post">
+                <p>Please input your email address.</p>
+                <input type="text" name="email" required>
+                <p>Please write about inquire.</p>
+                <textarea type="text" name="inquire" required></textarea><br>
+                <input class="contact-submit" type="submit" value="submit">
+            </form>
+        </div>
+        </div>
+    </main>
+
+    <%- include('footer'); %>
+
+</body>
+
+</html>

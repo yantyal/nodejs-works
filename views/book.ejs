@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works</title>
+    <link rel="stylesheet" href="/css/b_css/book.css" />
+    <link rel="stylesheet" href="/css/b_css/responsive.css" />
+    <script
+      src="https://kit.fontawesome.com/75eed8fdb7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <a href="/book"><i class="fas fa-book"></i>Book</a>
+        </div>
+        <a href="#" class="menu-icon"><i class="fas fa-align-justify"></i></a>
+        <div class="header-right">
+          <ul>
+            <% if(locals.isLoggedIn){ %>
+            <li><a href="/login">ログイン</a></li>
+            <li><a href="logout">ログアウト</a></li>
+            <% }else{ %>
+            <li><a href="/login">ログイン</a></li>
+            <li><a href="/account">新規登録</a></li>
+            <% } %>
+          </ul>
+        </div>
+        <div class="username">ようこそ、<%= locals.username %>さん</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="books">
+        <div class="container">
+          <div class="books-wrapper">
+            <h3 class="books-title">
+              <i class="fas fa-angle-double-right"></i>my books...
+            </h3>
+            <% if(locals.isLoggedIn){ %>
+            <div class="book-new">
+              <a href="/new">+書籍登録</a>
+            </div>
+            <% } %>
+          </div>
+          <div class="books-contents">
+            <% if(locals.isLoggedIn){ %> <% books.forEach((book)=>{ %>
+            <div class="book-item">
+              <a href="#"
+                ><img class="book-image" src="<%= book.smallImg %>"
+              /></a>
+              <ul>
+                <li>
+                  <div class="book-title">
+                    <a href="#"><%= book.title %></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="book-author">
+                    <a href="#"><%= book.author %></a>
+                  </div>
+                </li>
+              </ul>
+              <form action="/delete" method="post">
+                <input type="hidden" value="<%= book.title %>" name="title"/>
+                <input class="btn delete" type="submit" value="削除" />
+              </form>
+              <div class="book-detail">
+                <div class="btn detail"><a href="#">詳細</a></div>
+              </div>
+            </div>
+            <% }); %> <% }else{ %>
+            <div class="books-login">
+              <p>今すぐログインしよう！</p>
+              <p>ログインすると<br />書籍管理機能を使うことができます！</p>
+              <a href="/login">ログイン</a>
+            </div>
+            <% } %>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+          <a href="/book"><i class="fas fa-book"></i>Book</a>
+        </div>
+        <a href="#" class="menu-icon"><i class="fas fa-align-justify"></i></a>
+        <div class="footer-right">
+          <ul>
+            <li><a href="/">works</a></li>
+            <li><a href="/e_sentence">English</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

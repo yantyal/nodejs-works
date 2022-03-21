@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Avenir Next";
+  }
+li{
+    list-style: none;
+}
+a{
+    color:#fff;
+    text-decoration:dotted;
+}
+i{
+    margin-right:5px;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin:0 auto;
+}
+header{
+    height:65px;
+    width: 100%;
+    background-color:rgba(2, 77, 112, 0.9);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.header-left{
+    font-size: 30px;
+    margin:10px 0 0 20px;
+    float:left;
+}
+.username{
+    color:#9f9aa0;
+    font-size: 18px;
+    margin:20px 10px 0 0;
+    float: right;
+}
+.header-right{
+    float:right;
+    margin-right: 20px;
+}
+.header-right li{
+    padding:20px 20px;
+    transition: all 0.5s;
+    float:left;
+}
+.header-right li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.menu-icon{
+    color: white;
+    float: right;
+    font-size: 30px;
+    margin:10px 20px 0 0;
+    display:none;
+}
+
+.words{
+    padding: 50px;
+    padding-top: 120px;
+    width: 100%;
+    background-color:#f7f7f7;
+}
+.words-title{
+    border-bottom: 2px solid #dee7ec;
+    font-size:28px;
+    padding-bottom:15px;
+    margin-bottom:50px;
+    color: rgba(2, 77, 112, 0.9);
+}
+.word-item p{
+    width: 100%;
+    padding:5px 0 5px 5px;
+    border:2px solid #b3aeb5;
+}
+.word-item a{
+    color:#b3aeb5;
+}
+.text-content{
+    width:80%;
+    display:inline-block;
+    margin:10px 0 10px 0;
+    font-size:20px;
+    color:#b3aeb5;
+}
+.sentence-login{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    
+}
+.btn{
+    background-color: rgba(2, 77, 112, 0.9); 
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+footer{
+    height:100px;
+    background-color:rgba(2, 77, 112, 0.9);
+    color:#fff
+}
+.footer-left{
+    float:left;
+    font-size:36px;
+    margin: 10px 0 0 20px;
+}
+.footer-right{
+    float:right;
+    margin-right: 20px;
+}
+.footer-right li{
+    padding:20px;
+    float: left;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works</title>
+    <link rel="stylesheet" href="/css/works.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <script src="https://kit.fontawesome.com/75eed8fdb7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <%- include('header'); %>
+
+    <main>
+        <div class="account-form">
+            <div class="container">
+                <h3 class="works-title"><i class="fas fa-sign-in-alt"></i>ログイン</h3>
+                <% if(errors.length > 0){ %>
+                    <div class="account-errors">
+                        <ul>
+                            <% errors.forEach((error)=>{ %>
+                            <li><%= error %></li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                    <% } %>
+                <form class="form" action="/login" method="post">
+                    <p>Please input your name.</p>
+                    <input type="text" name="username" required>
+                    <p>Please input your email address.</p>
+                    <input type="text" name="email" required>
+                    <p>Please input your password.</p>
+                    <input type="password" name="password" required><br>
+                    <input class="account-submit" type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <%- include('footer'); %>
+
+</body>
+
+</html>
